@@ -110,3 +110,42 @@ function isObject(obj) {
     return type === 'function' || type === 'object' && !!obj;
 }
 ```
+---
+## TDD
+
+##### 6) Considere o teste abaixo e escreva a função para que o teste passe.
+
+```js
+// A função soma dois números, caso os números sejam iguais, a soma é triplicada
+
+describe("Sum function", () => {
+    test("(5, 1) => 6)", () => {
+        expect(sum(5, 1)).toEqual(6);
+    });
+
+    test("(1, 1) => 6)", () => {
+        expect(sum(1, 1)).toEqual(6);
+    });
+});
+```
+
+##### 7) Considere o teste abaixo e escreva a função para que o teste passe.
+
+```js
+describe("RevertString function", () => {
+    test("'casa' => 'asac'", () => {
+        expect(revert('casa')).toEqual('asac');
+    });
+
+    test("'javascript' => 'tpircsavaj'", () => {
+        expect(revert('javascript')).toEqual('tpircsavaj');
+    });
+});
+```
+
+##### 8) Usando TDD:
+- Crie uma classe chamada Calculadora;
+- Crie os métodos: soma, subtração, multiplicação, divisão e fatorial;
+- Use a criatividade e crie um último método que utilize pelo menos dois dos métodos criados anteriormente.
+
+##### 9) Escreva um teste (e depois a função) para uma função calcule como um troco (centavos) será dado em moedas. A função deve receber o valor do troco, e um array com as moedas disponíveis.
