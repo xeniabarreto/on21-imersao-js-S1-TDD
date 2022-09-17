@@ -73,12 +73,6 @@ Esse tipo de teste une os dois anteriores, por isso o termo "cinza". Avalia tant
     - Testes de Integração: Valida se as unidades do sistema funcionam juntas, integradas. Pode ocorrer delas apresentarem incompatibilidades ao funcionarem em conjunto, mesmo após terem sido aprovadas no teste de unidade;
     - Testes Ponta a Ponta (End-to-End, E2E): Valida o sistema de ponta a ponta, para garantir que o software funcione em todos os sistemas de destino pretendidos;
     - Testes de aceitação: Valida a aprovação do clientes. Os tipos de testes de aceitação são testes alfa, beta e gama;
-- Outros tipos:
-    - Teste de Regressão: Verifica se novos recursos quebram funcionalidade existentes;
-    - Teste de Stress: Testa quanta tensão o sistema pode suportar antes de falhar.;
-    - Teste de Performance: Testa o desempenho do software em diferentes cargas de trabalho;
-    - Teste Funcional: Verifica funções, emulando cenários de negócios, com base em requisitos funcionais;
-    - Teste de Caos: Testa a integridade, simulando e identificando proativamente falhas antes que elas levem a um tempo de inatividade não planejado ou uma experiência negativa do usuário.
 
 #### Sete princípios de teste de software
 
