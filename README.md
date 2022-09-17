@@ -2,30 +2,12 @@
   <img src="assets/reprograma-fundos-claros.png" alt="logo reprograma" width="500">
 </h1>
 
-# Tema da Aula
+# TDD - Test Driven Development
 
-Turma Online 21 - Imersão JavaScript | Semana 1 | 2022 | Professora Leticia
+Turma Online 21 - Imersão JavaScript | Semana 1 | 2022 | Professora Letícia Luzia
 
-### Instruções
-Antes de começar, vamos organizar nosso setup.
-* Fork esse repositório 
-* Clone o fork na sua máquina (Para isso basta abrir o seu terminal e digitar `git clone url-do-seu-repositorio-forkado`)
-* Entre na pasta do seu repositório (Para isso basta abrir o seu terminal e digitar `cd nome-do-seu-repositorio-forkado`)
-* [Add outras intrucoes caso necessario]
-
-### Objetivo
-Apresentar o conceito de testes, seus benefícios e dificuldades de implementação. Aprofundar conhecimento em testes unitários, custos de desenvolvimento, benefícios e implementação. Apresentar TDD e seus benefícios.
-
-### Resumo
-O que veremos na aula de hoje?
-- [Tema da Aula](#tema-da-aula)
-    - [Instruções](#instruções)
-    - [Objetivo](#objetivo)
-    - [Resumo](#resumo)
-
-- [Conteúdo](#conteúdo)
-
-  - [Introdução à Testes](#introdução-a-testes)
+### O que veremos na aula de hoje
+ - [Introdução à Testes](#introdução-a-testes)
     - [O que são e para que servem ](#o-que-são-testes-e-para-que-servem)
     - [Abordagens](#abordagens)
     - [Tipos de teste](#tipos-de-teste)
@@ -46,12 +28,32 @@ O que veremos na aula de hoje?
   - [Material da aula](#material-da-aula)
   - [Links Úteis](#links-úteis)
 
+### Combinados
+* Quando falar, levante a mão no Zoom
+* Mantenha seu microfone desligado quando não estiver interagindo
+* Se possível, mantenha a câmera ligada para nos conhecermos :)
+
+### Instruções
+Antes de começar, vamos organizar nosso setup.
+* Fork esse repositório 
+* Clone o fork na sua máquina (Para isso basta abrir o seu terminal e digitar `git clone url-do-seu-repositorio-forkado`)
+* Entre na pasta do seu repositório (Para isso basta abrir o seu terminal e digitar `cd nome-do-seu-repositorio-forkado`)
+* Altere o nome da pasta "nome-aluna" para o seu nome-sobrenome, este é o único local onde você deve realizar alterações
 # Conteúdo
 
 ## Introdução a Testes  
 
 #### O que são testes e para que servem
-[CONTEUDO]
+O teste de software é o processo de avaliação e verificação de que um produto de software ou aplicativo faz o que deveria fazer. Os benefícios do teste incluem a prevenção de bugs, a redução dos custos de desenvolvimento e a melhoria do desempenho.
+
+#### Quais problemas podemos evitar com a implementação de testes?
+Quanto mais cedo as equipes de desenvolvimento receberem feedback de teste, mais cedo elas poderão resolver problemas como:
+
+- Falhas arquitetônicas
+- Decisões de design ruins
+- Funcionalidade inválida ou incorreta
+- Vulnerabilidades de segurança
+- Problemas de escalabilidade
 
 #### Abordagens
 **Teste Caixa Branca**
@@ -66,7 +68,17 @@ Também é chamado de Teste Comportamental, Baseado em Especificações e Teste 
 Esse tipo de teste une os dois anteriores, por isso o termo "cinza". Avalia tanto os aspectos internos quanto os externos, de entrada e saída.
 
 #### Tipos de teste
-[CONTEUDO]
+- Principais:
+    - Testes Unitários: Valida se cada unidade de software funciona conforme o esperado. Uma unidade é o menor componente testável de um aplicativo;
+    - Testes de Integração: Valida se as unidades do sistema funcionam juntas, integradas. Pode ocorrer delas apresentarem incompatibilidades ao funcionarem em conjunto, mesmo após terem sido aprovadas no teste de unidade;
+    - Testes Ponta a Ponta (End-to-End, E2E): Valida o sistema de ponta a ponta, para garantir que o software funcione em todos os sistemas de destino pretendidos;
+    - Testes de aceitação: Valida a aprovação do clientes. Os tipos de testes de aceitação são testes alfa, beta e gama;
+- Outros tipos:
+    - Teste de Regressão: Verifica se novos recursos quebram funcionalidade existentes;
+    - Teste de Stress: Testa quanta tensão o sistema pode suportar antes de falhar.;
+    - Teste de Performance: Testa o desempenho do software em diferentes cargas de trabalho;
+    - Teste Funcional: Verifica funções, emulando cenários de negócios, com base em requisitos funcionais;
+    - Teste de Caos: Testa a integridade, simulando e identificando proativamente falhas antes que elas levem a um tempo de inatividade não planejado ou uma experiência negativa do usuário.
 
 #### Sete princípios de teste de software
 
@@ -100,31 +112,106 @@ Se um software construído é 99% livre de bugs, mas não segue o atende às exp
 
 #### Ferramentas
 **Jest**
-[CONTEUDO]
+<h6 align="center">
+  <img src="assets/jest-logo-png-transparent.png" alt="logo jest" width="80">
+</h6>
+Famosa e uma das mais utilizadas ferramentas de testes unitários para o ecossistema Javascript. Criado inicialmente para realizar testes em React, hoje é utilizado também para testar unidades no backend (Node).
+<a href="https://jestjs.io/pt-BR/">Documentação</a>
+
+
 **Cypress**
-[CONTEUDO]
-**Outros**
-[CONTEUDO]
+<h6 align="center">
+  <img src="assets/cypress-logo.png" alt="logo jest" width="150">
+</h6>
+Ferramenta de testes mais robusta, muito utilizado para automatizar testes no front-end e para testes E2E.
+<br>
+<a href="https://www.cypress.io/">Documentação</a>
 
 ## Testes Unitários
    #### O que são testes unitários e para que servem
-   [CONTEUDO]
+   Teste unitário verifica o comportamento de uma unidade de um programa. Nesse caso unidade pode ser considerada um pedaço pequeno e isolado do código, como por exemplo um método ou função.
+   Valida se esta unidade continuará funcionando caso sofra uma alteração, promovendo um crescimento saudável do sistema, independente de quanto ele crescer.
 
    #### Benefícios dos testes unitários
-   [CONTEUDO]
+   - Ajudam a encontrar e resolver bugs de maneira rápida e fácil;
+  - Contribuem para uma maior qualidade de código;
+  - Guiam para melhores arquiteturas de aplicação;
+  - Podem ser utilizadas como documentação;
+  - São focados em pequenas unidades, o que permite erros mais nítidos quando em comparação com outros tipos de teste;
+  - São rápidos e por isso podem ser executados com constância com baixo custo de processamento.
 
    #### Implementação de testes unitários
-   [CONTEUDO]
+   Um bom teste unitário deve seguir o F.I.R.S.T.:
+
+  - Rápido (Fast): Projetos grandes costumam ter muitos testes, tempo é dinheiro.
+  - Isolado (Isolated): Um teste unitário deve ser executado isoladamente, sem comunicações com sistemas externos ou bancos de dados.
+  - "Repetível" (Repeatable): Sua execução deve ter resultados consistentes caso não haja nenhuma alteração.
+  - "Auto-verificável" (Self-validating): O teste deve ser capaz de detectar de maneira automática se passou ou falhou.
+  - Minucioso (Thorough): Cobrir caminho felizes, infelizes, casos raros (edge cases)
+
+  E ainda:
+
+  - Simples: Teste devem ser fáceis de implementar e ler, sem repetição do código da função testada.
+  - Oportuno: A escrita de um teste não deve demorar mais que a escrita do código testado.
+
+  ```js
+  // Considere que serão utilizados apenas valores numéricos
+  function add(a, b) {
+      return a + b;
+  }
+
+  fuction mul(a, b) {
+      return a * b;
+  }
+
+  function sub(a, b) {
+      return a - b;
+  } 
+
+  function div(a, b) {
+      a / b;
+  } 
+
+  describe("Arithmetic functions", () => {
+      test('2 + 3 = 5', () => {
+          expect(add(2, 3)).toBe(5);
+      });
+
+      test('3 * 4 = 12', () => {
+          expect(mul(3, 4)).toBe(12);
+      });
+
+      test('5 - 6 = -1', () => {
+          expect(sub(5, 6)).toBe(-1);
+      });
+
+      test('8 / 4 = 2', () => {
+          expect(div(8, 4)).toBe(2);
+      });
+  });
+  
+  ```
 
 ## TDD: Test Driven Development
-   #### O que é TDD e para que servem
-   [CONTEUDO]
+   #### O que é TDD e para que serve
+   TDD é a sigla para *Test Driven Development*, que significa Desenvolvimento Orientado por Testes. Nessa metodologia de desenvolvimento de software a codificação dos testes unitários acontece antes da codificação das funcionalidades. Na prática, utilizar TDD, ajuda a ter mais segurança ao desenvolver do zero e fazer alterações, pois o feedback de erro (ou acerto) é mais rápido.
 
    #### Benefícios do TDD
-   [CONTEUDO]
+  - Aumenta segurança ao realizar alterações no código por conta do feedbeck rápido;
+  - Menos bugs - o código é feito para funcionar - isso promove menor tempo na depuração e correção;
+  - Promove código mais simples e bem estruturado;
+  - Reforça a cultura de qualidade de software.
 
    #### Implementação do TDD
-   [CONTEUDO]
+  O TDD é dividido em três fases: Vermelho (Red), Verde (Green) e Refatoração (Refactor). Passo a passo:
+
+  1. Escrevemos um teste para a funcionalidade que ainda será implementada. Como ela não existe, caso o teste seja executado ele deve resultar em erro, ou seja, vermelho!
+  2. Escrevemos a funcionalidade, e executamos o teste, agora ele deve funcionar, isso é o verde.
+  3. Se a funcionalidade e o teste funcionam, devemos buscar (se possível) melhorar o que foi codificado. As modificações podem fazer com que o teste falhe, a refatoração deve durar até o teste voltar a funcionar.
+
+  <h6 align="center">
+  <img src="assets/tdd-cycle.png" alt="logo jest" width="500">
+</h6>
 
 ***
 ### Exercícios 
@@ -135,7 +222,12 @@ Se um software construído é 99% livre de bugs, mas não segue o atende às exp
 * [Material](/material)
 
 ### Links Úteis
-* 
+* [Testes de software: Introdução, conceitos básicos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
+* [Os sete princípios do teste](https://medium.com/@marcio_rc/os-sete-princ%C3%ADpios-do-teste-de954ae080d0)
+* [Entenda de uma vez por todas o que são testes unitários, para que servem e como fazê-los](https://dayvsonlima.medium.com/entenda-de-uma-vez-por-todas-o-que-s%C3%A3o-testes-unit%C3%A1rios-para-que-servem-e-como-faz%C3%AA-los-2a6f645bab3)
+* [Entendendo e aplicando o Test Driven Development (TDD)](https://blog.onedaytesting.com.br/test-driven-development/)
+* [O que é TDD?](https://dev.to/womakerscode/o-que-e-tdd-4b5f)
+
 
 <p align="center">
 Desenvolvido com :purple_heart:  
