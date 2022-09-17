@@ -228,6 +228,11 @@ Ferramenta de testes mais robusta, muito utilizado para automatizar testes no fr
 * [Entendendo e aplicando o Test Driven Development (TDD)](https://blog.onedaytesting.com.br/test-driven-development/)
 * [O que é TDD?](https://dev.to/womakerscode/o-que-e-tdd-4b5f)
 
+***
+
+### Contato
+[E-mail](mailto:leticialuzia89@gmail.com)
+[Linkedin](https://www.linkedin.com/in/leticialuzia/)
 
 <p align="center">
 Desenvolvido com :purple_heart:  
