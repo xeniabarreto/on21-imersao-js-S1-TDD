@@ -7,7 +7,6 @@ const { Calculadora } = require ('../calculadora');
 
 describe("Teste Calculadora", () => {
     test("Realizando a soma de dois números", () => {
-
         expect(Calculadora.soma(4, 5)).toEqual(9)
     });
     

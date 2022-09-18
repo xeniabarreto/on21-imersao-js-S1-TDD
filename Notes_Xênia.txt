@@ -1,0 +1,34 @@
+INICIAR
+
+npm install - iniciar
+test.only - quando quiser Rodar somente um teste do arquivo
+rpm run test - mas ainda tem que passar o o caminho do arquivo
+
+
+GRAVAÇÃO DA AULA
+YouTubeYouTube | Ensino Reprograma
+{Turma ON21 - Imersão JS} - Test Driven Development - Aula 17/09 
+https://youtu.be/pU6tk9t50mk 
+
+
+VÍDEOS SOBRE TESTES: 
+
+https://willianjusten.com.br/
+https://willianjusten.com.br/https://willianjusten.com.br/
+
+
+LEITURA:
+
+https://jestjs.io/docs/using-matchers (math com Jest)
+
+
+OUTRAS ANOTAÇÕES
+
+Caça a teste = Bug Bash - Teste end-to-end
+É melhor usa { } no export e lembre de colocar { } no require tbm.
+Classes precisam estar em arquivo separados
+
+LIÇÃO DE CASA
+
+Exercicio de casa, mockar dados
+Pode mandar perguntas nas issues
