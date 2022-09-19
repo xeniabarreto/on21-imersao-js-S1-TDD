@@ -3,7 +3,7 @@ INICIAR
 npm install - iniciar
 test.only - quando quiser Rodar somente um teste do arquivo
 rpm run test - mas ainda tem que passar o o caminho do arquivo
-
+npx jest --coverage
 
 GRAVAÇÃO DA AULA
 YouTubeYouTube | Ensino Reprograma
