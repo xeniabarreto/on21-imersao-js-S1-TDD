@@ -8,7 +8,7 @@ function checkEvenNumber(num){
     let result = '';
 
     if(isNaN(num)) {
-        result = num + " não é um número";
+        result = num + "não é um número";
     } else {
         if (num % 2 == 0) {
             result = num + " é um número par";
@@ -18,7 +18,7 @@ function checkEvenNumber(num){
     }
 
     return result;
-}
+};
 
 function sum(num1, num2){
     if(num1 == num2){
