@@ -8,12 +8,12 @@ function checkEvenNumber(num){
     let result = '';
 
     if(isNaN(num)) {
-        result = num + "não é um número";
+        result = num + "não é um número"; // TESTAR ESSE CENARIO PARA COVERAGE
     } else {
         if (num % 2 == 0) {
             result = num + " é um número par";
         } else {
-            result = num + " é um número ímpar";
+            result = num + " é um número ímpar"; // TESTAR ESSE CENARIO PARA COVERAGE
         }
     }
 
