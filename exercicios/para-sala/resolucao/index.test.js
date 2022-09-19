@@ -9,9 +9,9 @@ describe("Função de conversão", () => {
 
 describe("Função ímpar ou par", () =>{
     test("deve retornar se é parâmetro número", () => {
-        const resultado = checkEvenNumber("banana")
+        const resultado = checkEvenNumber(20)
 
-        expect(resultado).toBeNaN()
+        expect(resultado).not.toBeNaN()
     
     }) 
 })
