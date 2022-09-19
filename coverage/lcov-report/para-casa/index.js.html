@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">72.41% </span>
+                <span class="strong">81.25% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>21/29</span>
+                <span class='fraction'>26/32</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">62.5% </span>
+                <span class="strong">68.75% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>10/16</span>
+                <span class='fraction'>11/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">72.41% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>21/29</span>
+                <span class='fraction'>24/30</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -121,36 +121,22 @@
 <a name='L56'></a><a href='#L56'>56</a>
 <a name='L57'></a><a href='#L57'>57</a>
 <a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a>
-<a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a>
-<a name='L63'></a><a href='#L63'>63</a>
-<a name='L64'></a><a href='#L64'>64</a>
-<a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L59'></a><a href='#L59'>59</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -194,41 +180,34 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">//Vide iNotes_Homework.txt
+const { dataBase } = require("./dataBase.Mock")
 &nbsp;
-const checkSaldo = (num1) =&gt; {
-    if(num1 &gt; 0){
-        return true;
-    } else <span class="missing-if-branch" title="else path not taken" >E</span>{
-<span class="cstat-no" title="statement not covered" >        return false;</span>
-    }
+const checkBalance = (clientId) =&gt; {
+    let idCliente = dataBase.find((x) =&gt; x.id == clientId);
+    return `Seu saldo é R$ ${idCliente.balance}.`
 };
 &nbsp;
-const checkLimite = () =&gt; {
+const checkSpecialLimit = (clientId) =&gt; {   
+    let idCliente = dataBase.find((x) =&gt; x.id == clientId);
+    
+    if(idCliente.limit === true){
+        return 'Seu cheque especial está Ativado';
+    } else <span class="missing-if-branch" title="else path not taken" >E</span>if (idCliente.limit === false){
+        return 'Seu cheque especial está Desativado'
 &nbsp;
-    const dadosDoCliente = {
-        "nome":"Debora",
-        "Saldo": 2000,
-        "Limite": true,
-        "valorLimite": 500
-    };
-&nbsp;
-    if(dadosDoCliente.Limite === true){
-        return true;
-    } else <span class="missing-if-branch" title="else path not taken" >E</span>{
-<span class="cstat-no" title="statement not covered" >        return false;</span>
     }
 };
 &nbsp;
 const checkSaldoLimite = () =&gt; {
-    const dadosDoCliente = {
+    const dataBase = {
         "nome":"Debora",
         "Saldo": 2000,
         "Limite": true,
         "valorLimite": 500
     };
 &nbsp;
-    if(dadosDoCliente.valorLimite &gt; 0){
-        console.log(`Você tem o limite de ${dadosDoCliente.valorLimite}.`);
+    if(dataBase.valorLimite &gt; 0){
+        console.log(`Você tem o limite de ${dataBase.valorLimite}.`);
         return true
     } else <span class="missing-if-branch" title="else path not taken" >E</span>{
 <span class="cstat-no" title="statement not covered" >        console.log("Você não tem limite disponivel");</span>
@@ -237,35 +216,35 @@ const checkSaldoLimite = () =&gt; {
 };
 &nbsp;
 const checkSaque = (valorDoSaque) =&gt; {
-    const dadosDoCliente = {
+    const dataBase = {
         "nome":"Debora",
         "Saldo": 2000,
         "Limite": true,
         "valorLimite": 500
     };
 &nbsp;
-    const somaSaldoLimite = dadosDoCliente.Saldo + dadosDoCliente.valorLimite;
+    const somaSaldoLimite = dataBase.Saldo + dataBase.valorLimite;
 &nbsp;
-    <span class="missing-if-branch" title="if path not taken" >I</span>if(valorDoSaque &lt; dadosDoCliente.Saldo ){
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(valorDoSaque &lt; dataBase.Saldo ){
 <span class="cstat-no" title="statement not covered" >        console.log(`Saque aprovado no valor de ${valorDoSaque}`);</span>
 <span class="cstat-no" title="statement not covered" >        return true;</span>
-    } else <span class="missing-if-branch" title="if path not taken" >I</span>if(valorDoSaque &gt; dadosDoCliente.Saldo &amp;&amp; valorDoSaque &lt; somaSaldoLimite ){
+    } else <span class="missing-if-branch" title="if path not taken" >I</span>if(valorDoSaque &gt; dataBase.Saldo &amp;&amp; valorDoSaque &lt; somaSaldoLimite ){
 <span class="cstat-no" title="statement not covered" >        console.log(`Saque aprovado com o uso do cheque especial.`);</span>
 <span class="cstat-no" title="statement not covered" >        return true;</span>
-    } else <span class="missing-if-branch" title="else path not taken" >E</span>if(valorDoSaque &gt; dadosDoCliente.Saldo &amp;&amp; valorDoSaque &gt; somaSaldoLimite ){
+    } else <span class="missing-if-branch" title="else path not taken" >E</span>if(valorDoSaque &gt; dataBase.Saldo &amp;&amp; valorDoSaque &gt; somaSaldoLimite ){
         console.log(`Você não tem saldo e não tem limite disponível`)
         return true;
     }
 }
 &nbsp;
-module.exports = { checkSaldo, checkLimite, checkSaldoLimite, checkSaque };</pre></td></tr></table></pre>
+module.exports = { checkBalance, checkSpecialLimit, checkSaldoLimite, checkSaque };</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-09-19T02:45:05.378Z
+                at 2022-09-19T05:17:29.482Z
             </div>
         <script src="../prettify.js"></script>
         <script>
