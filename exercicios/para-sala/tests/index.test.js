@@ -1,16 +1,5 @@
 const { convertCelsiusToFahrenheit, checkEvenNumber, sum, revert } = require('../index')
 
-// A função soma dois números, caso os números sejam iguais, a soma é triplicada
-describe("Sum function", () => {
-    test("it should sum two numbers", () => {
-        expect(sum(5, 1)).toEqual(6);
-    });
-
-    test("it should multiplicate the sum result", () => {
-        expect(sum(1, 1)).toEqual(6);
-    });
-});
-
 describe("Convert celsius function", () => {
     test("it should convert from celsius to fahrenheit", () => {
         expect(convertCelsiusToFahrenheit(60)).toEqual(140)
@@ -40,6 +29,22 @@ describe("Check even number function", () => {
     });
   });
 
+ // ----------------------- exercícios de tdd ------------------------- 
+
+// 6) Considere o teste abaixo e escreva a função para que o teste passe.
+// A função soma dois números, caso os números sejam iguais, a soma é triplicada
+describe("Sum function", () => {
+    test("it should sum two numbers", () => {
+        expect(sum(5, 1)).toEqual(6);
+    });
+
+    test("it should multiplicate the sum result", () => {
+        expect(sum(1, 1)).toEqual(6);
+    });
+});
+
+
+// 7) Considere o teste abaixo e escreva a função para que o teste passe.
 describe("RevertString function", () => {
     test("'casa' => 'asac'", () => {
         expect(revert('casa')).toEqual('asac');

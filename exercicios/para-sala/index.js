@@ -1,10 +1,3 @@
-function sum(num1, num2) {
-    if(num1==num2) {
-        return 3*(num1+num2)
-    }
-    return num1+num2
-}
-
 // 1) Escreva um teste para função abaixo:
 function convertCelsiusToFahrenheit(temperature){
     var tempConverted = temperature * 9 / 5 + 32;
@@ -29,10 +22,18 @@ function checkEvenNumber(num){
     return result;
 }
 
+// ------------------ exercicios de tdd --------------------
+
+function sum(num1, num2) {
+    if(num1==num2) {
+        return 3*(num1+num2)
+    }
+    return num1+num2
+}
+
 function revert(string) {
     return string.split("").reverse().join("")
 }
-
 
 module.exports = {
     convertCelsiusToFahrenheit,
