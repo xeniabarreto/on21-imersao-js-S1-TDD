@@ -58,4 +58,10 @@ describe("Conta Bancária", () => {
 
         expect(saque).toEqual(-150)
     })
+
+    test("deve retornar mensagem de erro caso não tenha limite disponível para saque", () => {
+        const saque = contaLeia.saque(650.00)
+
+        expect(saque).toEqual("Você não tem saldo nem limite disponível.")
+    })
 })
