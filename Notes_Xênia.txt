@@ -5,6 +5,24 @@ test.only - quando quiser Rodar somente um teste do arquivo
 rpm run test - mas ainda tem que passar o o caminho do arquivo
 npx jest --coverage
 
+
+CONFIG COBERTURA DE TESTE
+
+sudo apt install jest
+$ npm install --save-dev jest
+$ npx jest --init  //documento de configuração do jest
+    esponder: > no > node > yes > v8 > yes
+$ npx jest --coverage //rodar
+
+Pegar a anotaçao do Conifg do Jest
+Da pra configurar code smell (ma pratica codigo), lint, coverage antes de push
+
+branch sao os IFs na tabela de coverage o minimo infivado é 80%
+
+
+Mock é arquivo geralmente .json
+
+
 GRAVAÇÃO DA AULA
 YouTubeYouTube | Ensino Reprograma
 {Turma ON21 - Imersão JS} - Test Driven Development - Aula 17/09 
