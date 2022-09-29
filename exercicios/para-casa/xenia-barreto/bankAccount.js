@@ -36,7 +36,7 @@ const checkWithdraw = (clientId, valorDoSaque) => {
     const somaSaldoLimite = idCliente.balance + idCliente.limit_value;
 
     if(valorDoSaque < idCliente.balance ){
-        console.log(`Approved withdrawal in the amount of  ${valorDoSaque}`); 
+        console.log(`Approved withdrawal in the amount of ${valorDoSaque}`); 
         return true; 
     } else if(valorDoSaque > idCliente.balance && valorDoSaque < somaSaldoLimite ){
         console.log(`Approved withdrawal using special limit.`);
