@@ -12,7 +12,9 @@ sudo apt install jest
 $ npm install --save-dev jest
 $ npx jest --init  //documento de configuração do jest
     esponder: > no > node > yes > v8 > yes
-$ npx jest --coverage //rodar
+
+$ npx jest --coverage //rodar dem config jesy
+
 
 Pegar a anotaçao do Conifg do Jest
 Da pra configurar code smell (ma pratica codigo), lint, coverage antes de push
